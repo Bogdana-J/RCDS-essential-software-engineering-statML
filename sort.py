@@ -1,4 +1,5 @@
 def pivot_sort(arr):
+<<<<<<< HEAD
     """
     Sorts a list in ascending order using the pivot sort (similar to quicksort) algorithm.
 
@@ -25,3 +26,17 @@ if __name__ == "__main__":
     sample_list = [34, 7, 23, 32, 5, 62]
     sorted_list = pivot_sort(sample_list)
     print("Sorted list:", sorted_list)
+=======
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[0]
+
+    # Partition the array into two sub-arrays:
+    # 'left' with elements less than the pivot
+    # 'right' with elements greater than or equal to the pivot
+    left = [x for x in arr[1:] if x < pivot]
+    right = [x for x in arr[1:] if x >= pivot]
+
+    # Recursively sort the sub-arrays and combine them with the pivot
+    return pivot_sort(left) + [pivot] + pivot_sort(right)
+>>>>>>> upstream/main
