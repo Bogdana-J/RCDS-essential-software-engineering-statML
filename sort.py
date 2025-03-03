@@ -1,4 +1,17 @@
 def pivot_sort(arr):
+    """
+    Sorts a list in ascending order using the pivot sort (similar to quicksort) algorithm.
+
+    Args:
+        arr (list): The list of elements to be sorted.
+
+    Returns:
+        list: A new list with the elements sorted in ascending order.
+
+    Example:
+        >>> pivot_sort([34, 7, 23, 32, 5, 62])
+        [5, 7, 23, 32, 34, 62]
+    """
     if len(arr) <= 1:
         return arr
     else:
